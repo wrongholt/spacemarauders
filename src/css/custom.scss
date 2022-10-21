@@ -1,0 +1,65 @@
+// Required
+// @import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap");
+@import "../App.css";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primarycolor: #64a19d;
+.twitter {
+  background-color: $primarycolor !important;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  img {
+    width: 60%;
+    height: 60%;
+  }
+}
+.marketImage {
+  height: 50px;
+  width: auto;
+}
+.tables {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.balls {
+  width: 4em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background-color: #fc2f70;
+    &:nth-of-type(1) {
+      transform: translateX(-100%);
+      animation: left-swing 0.5s ease-in alternate infinite;
+    }
+    &:nth-of-type(3) {
+      transform: translateX(-95%);
+      animation: right-swing 0.5s ease-out alternate infinite;
+    }
+    @keyframes left-swing {
+      50%,
+      100% {
+        transform: translateX(95%);
+      }
+    }
+
+    @keyframes right-swing {
+      50% {
+        transform: translateX(-95%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  }
+}
